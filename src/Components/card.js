@@ -2,13 +2,13 @@ import { StyleSheet } from 'react-native';
 
 import { Card, Title, Paragraph } from 'react-native-paper';
 
-export default function card() {
+export default function card(props) {
   return (
       <Card style={styles.card} onPress={() => console.log('hohaheeyawalla--')}>
-        <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
+        <Card.Cover source={{ uri: props.sourceImage }} />
         <Card.Content>
-          <Title>Card title</Title>
-          <Paragraph>Card content</Paragraph>
+          <Title>{props.title}</Title>
+          <Paragraph>{props.paragraph}</Paragraph>
         </Card.Content>
       </Card>
   );

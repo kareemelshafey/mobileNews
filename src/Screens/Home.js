@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Card />
+                <Card sourceImage='https://picsum.photos/700' title="HI" paragraph = 'hihihih'/>
             </View>
         )
     }
