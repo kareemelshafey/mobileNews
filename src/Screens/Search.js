@@ -7,7 +7,7 @@ class Home extends Component {
     state = {
         apiKey: "fecd0f9e3c294c8881431a75755c9e96"
     };
-    
+
     componentDidMount() {
         this.props.navigation.setOptions({
           title: this.props.route.params.title,
@@ -17,7 +17,7 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <News link={`https://newsapi.org/v2/top-headlines?q=${this.props.route.params.parsed}&apiKey=${this.state.apiKey}`}/>
+        <News link={`https://newsapi.org/v2/everything?q=${this.props.route.params.parsed}&apiKey=${this.state.apiKey}`}/>
       </View>
     );
   }
