@@ -1,10 +1,14 @@
 import { StyleSheet } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
 import { Card, Title } from "react-native-paper";
 
 export default function card(props) {
+  const navigation = useNavigation();
   return (
-    <Card style={styles.card} onPress={() => console.log("hohaheeyawalla--")}>
+    <Card
+      style={styles.card}
+      onPress={() => navigation.navigate("Article", props.news)}
+    >
       <Card.Cover
         style={{ margin: "2.5%" }}
         source={{ uri: props.news.urlToImage }}
