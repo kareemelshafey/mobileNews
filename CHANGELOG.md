@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/kareemelshafey/mobileNews/compare/v1.2.1...v1.3.0) (2022-05-13)
+
+
+### Features
+
+* click on the card to preview the article ([d1fe2eb](https://github.com/kareemelshafey/mobileNews/commit/d1fe2ebc99b8320e7ab2b0f2870dc3a67da3b30c))
+* search bar is now added ([12e64be](https://github.com/kareemelshafey/mobileNews/commit/12e64be79c4c56fc19d609f2aeebb309370fc85f))
+* search is now working ([25bc509](https://github.com/kareemelshafey/mobileNews/commit/25bc5092efcfd2aed6e858450de40a5d0d484d26))
+
 ### [1.2.1](https://github.com/kareemelshafey/mobileNews/compare/v1.2.0...v1.2.1) (2022-05-12)
 
 
