@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
 import News from "../Components/news";
+import SearchBar from "../Components/searchBar"
 
 class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <SearchBar />
         <News />
       </View>
     );
