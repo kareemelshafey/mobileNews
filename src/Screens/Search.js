@@ -4,15 +4,20 @@ import News from "../Components/news";
 import SearchBar from "../Components/searchBar"
 
 class Home extends Component {
-  state = {
-    apiKey: "fecd0f9e3c294c8881431a75755c9e96"
-  };
-
+    state = {
+        apiKey: "fecd0f9e3c294c8881431a75755c9e96"
+    };
+    
+    componentDidMount() {
+        this.props.navigation.setOptions({
+          title: this.props.route.params.title,
+        });
+      }
+      
   render() {
     return (
       <View style={styles.container}>
-        <SearchBar navigation={this.props.navigation} />
-        <News link={`https://newsapi.org/v2/top-headlines?country=us&apiKey=${this.state.apiKey}`}/>
+        <News link={`https://newsapi.org/v2/top-headlines?q=${this.props.route.params.parsed}&apiKey=${this.state.apiKey}`}/>
       </View>
     );
   }

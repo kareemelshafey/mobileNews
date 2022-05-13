@@ -13,6 +13,7 @@ class News extends Component {
   state = {
     news: [],
     apiKey: "fecd0f9e3c294c8881431a75755c9e96",
+    link: null
   };
 
   componentDidMount() {
@@ -21,7 +22,7 @@ class News extends Component {
 
   fetchFromAPI() {
     fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${this.state.apiKey}`
+      this.props.link
     )
       .then((res) => res.json())
       .then((response) => {

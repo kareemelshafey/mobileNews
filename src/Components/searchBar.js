@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import { View, Text, TextInput, StyleSheet, Keyboard } from "react-native";
+import { View, TextInput, StyleSheet, Keyboard } from "react-native";
 
 class SearchBar extends Component { 
     constructor(props) {  
         super(props);  
-        this.state = {text: ''};  
+        this.state = {text: '', parsed: ''};  
     }  
 
     search() {
-        const parsed = this.state.text.replace(/\s/g, '-')
+        const parsedText = this.state.text.replace(/\s/g, '-')
+        const searchData = { text: this.state.text, parsed: parsedText }
+        this.props.navigation.navigate("Search", searchData)
     }
 
     render() {
