@@ -6,14 +6,18 @@ import {
   ActivityIndicator,
   Image,
   TouchableOpacity,
+  RefreshControl 
 } from "react-native";
 import Card from "../Components/card";
+
+// const [Refreshing,setRefreshing] = useState(false);
 
 class News extends Component {
   state = {
     news: [],
     apiKey: "fecd0f9e3c294c8881431a75755c9e96",
-    link: null
+    link: null,
+    refreshing: false
   };
 
   componentDidMount() {
@@ -27,12 +31,17 @@ class News extends Component {
       .then((res) => res.json())
       .then((response) => {
         this.setState({ news: response.articles });
-        console.log(this.state.news.length);
       })
       .catch((err) => console.error(err));
   }
 
   render() {
+    const refresh = () => {
+      this.setState({refreshing: true});
+      this.fetchFromAPI()
+      this.setState({refreshing: false});
+    }
+
     return (
       <View>
         {this.state.news.length === 0 ? (
@@ -42,7 +51,9 @@ class News extends Component {
             size="large"
           />
         ) : (
-          <ScrollView vertical={true}>
+          <ScrollView vertical={true} refreshControl={
+            <RefreshControl refreshing={ this.state.refreshing } onRefresh={ refresh }/>
+          }>
             {this.state.news.map((news, index) => (
               <View style={{ margin: 10 }} key={index}>
                 <Card
