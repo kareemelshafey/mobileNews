@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/kareemelshafey/mobileNews/compare/v1.3.0...v1.4.0) (2022-05-14)
+
+
+### Features
+
+* add pull down to refresh articles page ([b34e3eb](https://github.com/kareemelshafey/mobileNews/commit/b34e3eb77811689c5f57600bf8e072297efd41db))
+* bottom navigation tabs is now added ([a251912](https://github.com/kareemelshafey/mobileNews/commit/a251912c73189cf341ce00dfbbc7cfe24a193939))
+* change language to arabic is now available, but you need to refresh when you are redirected to home ([9ec51a9](https://github.com/kareemelshafey/mobileNews/commit/9ec51a95bbcbacd6dc78adfdde35af123c4f250c))
+
+
+### Bug Fixes
+
+* code clean ([ee466cc](https://github.com/kareemelshafey/mobileNews/commit/ee466ccb0975298e828c6ec5b953af6e1a1cfc91))
+* searching on everything articles ([a3ef65e](https://github.com/kareemelshafey/mobileNews/commit/a3ef65e46bbb7026d8eea076af04cd2d625c20de))
+
 ## [1.3.0](https://github.com/kareemelshafey/mobileNews/compare/v1.2.1...v1.3.0) (2022-05-13)
 
 
