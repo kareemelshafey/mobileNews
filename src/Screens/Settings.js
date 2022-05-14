@@ -12,7 +12,6 @@ class Settings extends Component {
 
   changeToArabic(){
     globalData.language = false
-    console.log(globalData.language)
     this.props.navigation.navigate("Home", language=true)
   }
 

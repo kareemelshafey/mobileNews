@@ -32,7 +32,6 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         {languageNews}
-        {/* <News link={`https://newsapi.org/v2/everything?q=${this.props.route.params.parsed}&apiKey=${this.state.apiKey}`}/> */}
         <BottomBar />
       </View>
     );
