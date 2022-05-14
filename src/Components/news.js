@@ -6,11 +6,10 @@ import {
   ActivityIndicator,
   Image,
   TouchableOpacity,
-  RefreshControl 
+  RefreshControl,
+  StyleSheet 
 } from "react-native";
 import Card from "../Components/card";
-
-// const [Refreshing,setRefreshing] = useState(false);
 
 class News extends Component {
   state = {
@@ -51,7 +50,7 @@ class News extends Component {
             size="large"
           />
         ) : (
-          <ScrollView vertical={true} refreshControl={
+          <ScrollView vertical={true} contentContainerStyle={{paddingBottom: '30%'}} refreshControl={
             <RefreshControl refreshing={ this.state.refreshing } onRefresh={ refresh }/>
           }>
             {this.state.news.map((news, index) => (
@@ -70,5 +69,13 @@ class News extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  scrollView: {
+    flexGrow: 1,
+    justifyContent: 'flex-end',
+    paddingEnd: 20
+  }
+})
 
 export default News;

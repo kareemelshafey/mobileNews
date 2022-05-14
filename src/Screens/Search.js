@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
 import News from "../Components/news";
-import SearchBar from "../Components/searchBar"
+import BottomBar from "../Components/bottomNavigation"
 
 class Home extends Component {
     state = {
@@ -18,6 +18,7 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <News link={`https://newsapi.org/v2/everything?q=${this.props.route.params.parsed}&apiKey=${this.state.apiKey}`}/>
+        <BottomBar />
       </View>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Image } from "react-native";
 import { Headline, Subheading, Paragraph } from "react-native-paper";
+import BottomBar from "../Components/bottomNavigation"
 
 class Article extends Component {
   componentDidMount() {
@@ -20,6 +21,7 @@ class Article extends Component {
         <Subheading> {this.props.route.params.publishedAt} </Subheading>
         <Subheading> {this.props.route.params.source.name} </Subheading>
         <Paragraph>{this.props.route.params.content}</Paragraph>
+        <BottomBar />
       </View>
     );
   }
